@@ -1,10 +1,10 @@
 # ParsePictureApp Uygulaması
 
 ## Giriş
-Proje kapsamında; ParseSwift kütüphaneleri, back4app servis sağlayıcısı üzerinde kullanılarak bir fotoğraf paylaşım uygulaması tasarlanmıştır. 
+Proje kapsamında; ParseSwift kütüphaneleri, back4app servis sağlayıcısı üzerinde kullanılarak bir fotoğraf paylaşım uygulaması MVVM tasarım kalıbı ile tasarlanmıştır. 
 
 ## Hedef
-Proje ile birlikte; ParseSwift kütüphaneleri kullanılarak kullanıcı kayıt, kullanıcı girişi, fotoğraf ve yorumdan oluşan kullanıcı iletilerinin web tabanlı kayıt edilmesi ve kullanıcıya bir arayüz ile sunulması işlemlerinin nasıl tasarlanacağının ortaya konulması amaçlanmıştır. 
+Proje ile birlikte; ParseSwift kütüphaneleri kullanılarak kullanıcı kayıt, kullanıcı girişi, fotoğraf ve yorumdan oluşan kullanıcı iletilerinin web tabanlı kayıt edilmesi ve kullanıcıya bir arayüz ile sunulması işlemlerinin MVVM tasarım kalıbı ile nasıl tasarlanacağının ortaya konulması amaçlanmıştır. 
 
 ## Uygulama Kullanımı
 Uygulama ilk olarak ParseSwift ile kullanıcı kaydı ve giriş işlemi ile başlamakta, uygulama içerisinden çıkış yapılmadığı sürece kullanıcı oturumu açık tutulmaktadır.
