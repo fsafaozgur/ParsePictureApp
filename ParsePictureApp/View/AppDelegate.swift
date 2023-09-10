@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //Sunucuya baglaniyoruz
-        ParseSwift.initialize(applicationId: "xxxxx", clientKey: "xxxxx", serverURL: URL(string: "xxxxx")!)
+        ParseSwift.initialize(applicationId: "xxxxxx", clientKey: "xxxxxx", serverURL: URL(string: "xxxxxx")!)
         
         
         return true
