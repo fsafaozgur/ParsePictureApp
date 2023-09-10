@@ -15,7 +15,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
     
-    var postArray : [Post]?
+    
+    var feedTableViewModel : FeedTableViewModel?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +33,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func fetchDatas () {
         
         //Append islemi olmadigi icin buna gerek olmasa da yine de onlem olsun diye mukerrer veri gosterilmemesini garanti altina aliyoruz
-        postArray?.removeAll(keepingCapacity: false)
         
         //Filtreleme yapacak olsak su sekil bir kod yazabilirdik;
         /*
@@ -53,7 +55,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if array.count > 0 {
                     
                     //Veritabanindan gelen [Post] dizisini bizim olusturdugumuz postArray e ata
-                    self.postArray = array
+                    self.feedTableViewModel = FeedTableViewModel(postList: array)
                 
                     //Veriler geldikten sonra asenkron olarak tablo listesini yenile
                     DispatchQueue.main.async {
@@ -92,7 +94,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postArray == nil ? 0 : postArray?.count as! Int
+        return feedTableViewModel?.postList == nil ? 0 : feedTableViewModel?.numberOfRowSection() as! Int
     }
     
     
@@ -102,14 +104,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell  =
         tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedTableViewCell
         
+        let postArray = feedTableViewModel?.cellForRowAt(index: indexPath.row)
+        
         //Username ekrana bas
-        cell.usernameLabel.text = postArray?[indexPath.row].username
+        cell.usernameLabel.text = postArray?.username
         
         //Yorumu ekrana bas
-        cell.commentLabel.text = postArray?[indexPath.row].comment
+        cell.commentLabel.text = postArray?.comment
         
         //Databaseden Data formatinda gelen veriyi UIImage formatina cevir ve ekrana resim olarak bas
-        if let data = postArray?[indexPath.row].imageData as? Data {
+        if let data = postArray?.imageData as? Data {
             cell.feedImageView.image = UIImage(data: data)
         }
         

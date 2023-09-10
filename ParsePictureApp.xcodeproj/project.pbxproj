@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060D1F942AADF406007ECAAA /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060D1F932AADF406007ECAAA /* FeedViewModel.swift */; };
 		064B79B22AA9D10300523E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064B79B12AA9D10300523E74 /* AppDelegate.swift */; };
 		064B79B42AA9D10300523E74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064B79B32AA9D10300523E74 /* SceneDelegate.swift */; };
 		064B79B62AA9D10300523E74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064B79B52AA9D10300523E74 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060D1F932AADF406007ECAAA /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		064B79AE2AA9D10300523E74 /* ParsePictureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParsePictureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		064B79B12AA9D10300523E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		064B79B32AA9D10300523E74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		060D1F912AADDE64007ECAAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				064B79B12AA9D10300523E74 /* AppDelegate.swift */,
+				064B79B32AA9D10300523E74 /* SceneDelegate.swift */,
+				064B79B52AA9D10300523E74 /* ViewController.swift */,
+				064B79C82AA9FF3D00523E74 /* FeedViewController.swift */,
+				064B79CA2AA9FF4F00523E74 /* UploadViewController.swift */,
+				064B79CC2AAA0BA800523E74 /* SettingsViewController.swift */,
+				06A950B32AAB096D00DB7E75 /* FeedTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		060D1F922AADDE9E007ECAAA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				060D1F932AADF406007ECAAA /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		064B79A52AA9D10300523E74 = {
 			isa = PBXGroup;
 			children = (
@@ -70,18 +94,13 @@
 		064B79B02AA9D10300523E74 /* ParsePictureApp */ = {
 			isa = PBXGroup;
 			children = (
+				060D1F922AADDE9E007ECAAA /* ViewModel */,
+				060D1F912AADDE64007ECAAA /* View */,
 				06A950B52AAB0BD800DB7E75 /* Model */,
-				064B79B12AA9D10300523E74 /* AppDelegate.swift */,
-				064B79B32AA9D10300523E74 /* SceneDelegate.swift */,
-				064B79B52AA9D10300523E74 /* ViewController.swift */,
 				064B79B72AA9D10300523E74 /* Main.storyboard */,
 				064B79BA2AA9D10500523E74 /* Assets.xcassets */,
 				064B79BC2AA9D10500523E74 /* LaunchScreen.storyboard */,
 				064B79BF2AA9D10500523E74 /* Info.plist */,
-				064B79C82AA9FF3D00523E74 /* FeedViewController.swift */,
-				064B79CA2AA9FF4F00523E74 /* UploadViewController.swift */,
-				064B79CC2AAA0BA800523E74 /* SettingsViewController.swift */,
-				06A950B32AAB096D00DB7E75 /* FeedTableViewCell.swift */,
 			);
 			path = ParsePictureApp;
 			sourceTree = "<group>";
@@ -172,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				060D1F942AADF406007ECAAA /* FeedViewModel.swift in Sources */,
 				064B79B62AA9D10300523E74 /* ViewController.swift in Sources */,
 				064B79CB2AA9FF4F00523E74 /* UploadViewController.swift in Sources */,
 				06A950B42AAB096D00DB7E75 /* FeedTableViewCell.swift in Sources */,
